@@ -1,0 +1,132 @@
+body
+{
+    overflow-x: hidden;
+    background:linear-gradient(#26f8ed, #f453d6, #f27edf, #38f5ec);
+}
+
+.carta
+{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    height: 80px;
+    position: absolute;
+    border-radius: 20px;
+}
+
+.carta ul
+{
+    display: flex;
+    width: 250px;
+}
+.carta ul li 
+{
+    list-style: none;
+    position: absolute;
+    width: 175px;
+    height: 60px; 
+    z-index: 2;
+}
+.carta ul li a
+{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.contenedor
+{
+    margin: 70px;
+    margin-left: 150px;
+    display: flex;
+    
+}
+.card
+{
+    font-family: 'Times New Roman', Times, serif;
+    border-color: rgba(0, 0, 0, 0.1);
+    width: 250px;
+    height: 300px;
+    background: rgb(255, 255, 255);
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    border-radius: 10px;
+    transition: 1s;
+}
+.card:hover
+{
+    transform: translateX(40%);
+}
+.card .img1
+{
+    border-radius: 10px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transform-origin: left;
+    transform-style: preserve-3d;
+    overflow-x: hidden;
+    background: var(--clr);
+    transition: 1s;
+   
+}
+.card:hover .img1
+{
+    transform:rotate(-160deg);
+}
+.card .img1 img
+{
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    transform-style: preserve-3d;
+    backface-visibility:hidden;
+}
+
+.card .datos
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card .datos .contenido
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card .datos .contenido h2
+{
+    color: var(--clr);
+    text-align: center;
+    font: weight 400;
+    line-height: 1em;
+}
+.card .datos .contenido h2 span
+{
+    color: var(--clr);
+    font-size: 0.8em;
+}
+.wrapper
+{
+  display:grid;
+    grid-template-columns:repeat(3, 3fr);
+    grid-gap: 30px;  
+}
